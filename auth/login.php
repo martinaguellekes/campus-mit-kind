@@ -33,7 +33,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             $_SESSION["username"] = $user["username"];
             $_SESSION["role"] = $user["role"];
 
-            $message = "Anmeldung erfolgreich!";
+            header("Location: ../forum/index.php");
+            exit;
 
         } else {
             $message = "E-Mail-Adresse oder Passwort ist falsch.";
